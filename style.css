@@ -6,22 +6,28 @@
   width: 500px;
   height: 200px;
   border: 1px solid black;
+  position: absolute;
 }
 #character {
-  width: 20px;
-  height: 50px;
-  background-color: red;
+  width: 60px;
+  height: 45px;
   position: relative;
-  top: 150px;
+  top: 155px;
 }
+
 #block {
-  width: 20px;
+  width: 30px;
   height: 20px;
-  background-color: blue;
+  /* background-color: blue; */
   position: relative;
   top: 130px;
-  left: 480px;
-  /* animation: block 1s infinite; */
+  left: 470px;
+  animation: block 5s infinite;
+}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
 }
 @keyframes jump {
   0% {
@@ -39,16 +45,16 @@
 }
 @keyframes longJump {
   0% {
-    top: 300px;
+    top: 150px;
   }
   30% {
-    top: 100px;
+    top: 50px;
   }
   70% {
-    top: 100px;
+    top: 50px;
   }
   100% {
-    top: 300px;
+    top: 150px;
   }
 }
 @keyframes block {
@@ -59,7 +65,6 @@
     left: -480px;
   }
 }
-
 .animate {
-  animation: jump 500ms;
+  animation: jump 500ms, longJump 500ms;
 }
